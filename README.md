@@ -1,5 +1,5 @@
 
-Android app
+<h2>Android app</h2>
 
 download and install apk from here : http://xmotiv.comli.com/nikiassign.zip
 
@@ -11,7 +11,7 @@ or
 4)Run in any emulator or install the apk generated in app/build/apk-output folder<br>
 
 
-RSS Feeds
+<h2>RSS Feeds</h2>
 
 You can find the working webpage here
 http://xmotiv.comli.com/nikias/feeds.html
@@ -22,7 +22,7 @@ or
 3)Start Wamp server<br>
 4)open localhost/nikias/feeds.html in any browser<br>
 
-Java Program for String Sort
+<h2>Java Program </h2> for String Sort
 
 1)extract StrComp<br>
 2)open eclipse and go to File->Import->General->Existing project into Workspace<br>
