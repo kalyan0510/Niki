@@ -22,4 +22,10 @@ or
 3)Start Wamp server
 4)open localhost/nikias/feeds.html in any browser
 
+Java Program for String Sort
 
+1)extract StrComp
+2)open eclipse and go to File->Import->General->Existing project into Workspace
+3)go to StrComp.java and click on build and run as Java Application
+
+or just copypast the package 'com.app' in the code and run in any IDE
