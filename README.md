@@ -1,7 +1,7 @@
 
 Android app
 
-download and install apk from here : 
+download and install apk from here : http://xmotiv.comli.com/nikiassign.zip
 
 or
 
