@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+<style type="text/css">
+ .topcorner{
+   position:absolute;
+   top:0;
+   right:0;
+  }
+</style>
+</style>
+<script type="text/javascript" src="date_time.js"></script>
+<script type="text/javascript" src="time_spent.js"></script>
+<head>
+	<title>
+		Reddit 
+	</title>
+</head>
+<body>
+<h1>Reddit feeds : Niki Assignment</h1>
+<a href="http://www.github.com/kalyan0510">Developer: kalyan0510 </a>
+<div style="position:absolute;
+   top:0;
+   right:0;">
+	 <span id="date_time"></span>
+		 
+
+</div>
+ <script type="text/javascript">window.onload = date_time('date_time');</script>
+<?php header('Access-Control-Allow-Origin: *'); ?>
+<!-- <button type="button" style="height: 200px;width: 500px" onclick="">Get Feeds</button>
+ --><br><br>
+<table id="demo"></table>
+
+<script>
+loadDoc()
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      myFunction(xhttp);
+    }
+  };
+  xhttp.open("GET", "rss.xml", true);
+  xhttp.send();
+}
+
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Title</th><th>Author</th><th>Content</th></tr>";
+  var x = xmlDoc.getElementsByTagName("entry");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr "+"id="+i+"><td>" +
+    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    "<a href='"+x[i].getElementsByTagName("author")[0].getElementsByTagName("uri")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("author")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue
+    +"</a></td><td>" +
+    x[i].getElementsByTagName("content")[0].childNodes[0].nodeValue +
+    "</td>"+"<td><button type='button' onclick='deleteRow(this)'/>" +
+    "Hide post" +
+    "</button>"
+    +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+function deleteRow(btn) {
+  var row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+
+
+</script>
+
+</body>
+</html>
